@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fasadio.ru - система заказа мебельных фасадов</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter44669668 = new Ya.Metrika({
+                        id: 44669668,
+                        clickmap: true,
+                        trackLinks: true,
+                        accurateTrackBounce: true,
+                        webvisor: true,
+                        trackHash: true
+                    });
+                } catch (e) {}
+            });
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function() {
+                    n.parentNode.insertBefore(s, n);
+                };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else {
+                f();
+            }
+        })(document, window, "yandex_metrika_callbacks");
+    </script> <noscript><div><img src="https://mc.yandex.ru/watch/44669668" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&amp;subset=cyrillic-ext" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <a class="navbar-brand fs-font-300" style="margin-top:-10px; color:white;" href="index.html"><big><i class="fa fa-clone" aria-hidden="true"></i> Fasadio.ru</big>
+            <br /><small>система заказа мебельных фасадов</small>
+          </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <!-- <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ростов-на-Дону <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Астрахань</a></li>
+                            <li><a href="#">Волгоград</a></li>
+                            <li><a href="#">Воронеж</a></li>
+                            <li><a href="#">Краснодар</a></li>
+                            <li><a href="#">Крым</a></li>
+                            <li><a href="#">Новороссийск</a></li>
+                            <li><a href="#">Сочи</a></li>
+                            <li><a href="#">Ставрополь</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Другой город</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+                <!-- <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Название фасада">
+            </div>
+            <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i> Найти</button>
+          </form> -->
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li><a href="login.html"><i class="fa fa-sign-in" aria-hidden="true"></i> Войти</a></li> -->
+                    <!-- <li><a href="">Зарегистрироваться</a></li> -->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <section>
+        <div class='container'>
+            <div class="row text-center">
+                <h1>Заказ № <text id='zakazN'>000</text></h1>
+            </div>
+            <div class='row'>
+                <div class="col-md-2">
+                    <!-- <ul class="nav nav-pills nav-stacked">
+              <br />
+              <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i> &nbsp;Поиск фасада</a></li>
+              <li><a href="#"><i class="fa fa-users" aria-hidden="true"></i> &nbsp;Постащики</a></li>
+              <li><a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> &nbsp;Мои заказы</a></li>
+              <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i> &nbsp;Настройки</a></li>
+              <li><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i> &nbsp;Оплата</li>
+            </ul> -->
+                </div>
+                <div class='col-md-8 text-ceneter panel panel-default' style='margin-top:20px;'>
+
+                    <div id='cube' class="fs-container-animate-cube hidden-xs hidden-xm hidden-md text-center" style='margin-top:-70px;'>
+                        <div class="container-cube">
+                            <div class="back-cube side-cube"></div>
+                            <div class="left-cube side-ends-cube main-sides-cube"></div>
+                            <div class="right-cube side-ends-cube main-sides-cube"></div>
+                            <div class="top-cube side-ends-cube main-sides-cube"></div>
+                            <!-- <div class="bottom-cube side-ends-cube main-sides-cube"></div> -->
+                            <div id="front-cube" class="front-cube side-cube main-sides-cube">
+                                <div class="fs-blick-on"></div>
+                            </div>
+                        </div>
+                        * пример фасада в цвете <br><text id='colorName'></text>
+                    </div>
+
+                    <!-- <h4>Подзаказ &mdash; <span class="label label-warning">123/1</span></h4>
+            <p>Подзаказ это набор фасадов разных размеров с одинаковыми параметрами (цвет, толщина, фрезеровка и т.д.)<br />В вашем заказе может быть несколько подзаказов с разными фасадами</p> -->
+                    <h3>Параметры фасада</h3>
+                    <p>Здесь нужно указать какой фасад вам нужен</p>
+                    <br />
+                    <form class="form-horizontal" role="form">
+                        <!-- <div class="form-group">
+                <label class="col-md-4 control-label" for="selectbasic">Выберите производителя</label>
+                <div class="col-md-4">
+                  <select id="selectbasic" name="selectbasic" class="form-control">
+                    <option value="1">"Хамелеон"</option>
+                  </select>
+                </div>
+              </div> -->
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-4 control-label">Раскладка</label>
+                            <div class="col-sm-2">
+                                <div class="radio">
+                                    <label>
+                                    <input type="radio" name="optionsRadios2" id="selectColorRal" value="option1" checked>
+                                    RAL
+                                  </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                    <input type="radio" name="optionsRadios2" id="selectColorSayerlack" value="option2">
+                                    Sayerlack
+                                  </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label id='colorLabel' for="color" class="col-sm-4 control-label">Цвет RAL</label>
+                            <div class="col-sm-2">
+                                <input class="form-control" id="color" placeholder="0" type="number" value='1000' />
+                                <!-- <input class="form-control" id="color" placeholder="1000" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" min='1000' max='9023' type="number" maxlength="4" value='4003' /> -->
+                                <a class='small' id='tableRAL' target="_blank" href="img/RAL.jpg">таблица RAL</a>
+                                <!-- <a class='small' id='tableSayerlack' style='display: none;' target="_blank" href="img/Sayerlack.jpg">таблица Sayerlaсk</a> -->
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-4 control-label">Текстура</label>
+                            <div class="col-sm-2">
+                                <div class="radio">
+                                    <label>
+                            <input type="radio" name="optionsRadios" id="optionMetallic" value="option1" checked>
+                            Металлик
+                          </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                            <input type="radio" name="optionsRadios" id="optionGlyanec" value="option2" >
+                            Глянец
+                          </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                            <input type="radio" name="optionsRadios" id="optionMatovaya" value="option3" >
+                            Матовый
+                          </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="selectSizeMDF" class="col-sm-4 control-label">Толщина МДФ</label>
+                            <div class="col-sm-2">
+                                <select id='selectSizeMDF' class="form-control">
+                    <option value='16'>16 мм</option>
+                    <option value='19'>19 мм</option>
+                  </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="selectScruglenieFasada" class="col-sm-4 control-label">Скругление фаски фасада(обкат)</label>
+                            <div class="col-sm-2">
+                                <select id='selectScruglenieFasada' class="form-control">
+                    <option value='2'>2 мм</option>
+                    <option value='4'>4 мм</option>
+                    <option value='7'>7 мм</option>
+                    <option value='10'>10 мм</option>
+                    <option value='16'>16 мм</option>
+                  </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label"></label>
+                            <div class="col-sm-9">
+                                <div style='visibility: hidden' class="checkbox">
+                                    <label>
+                                    <input disabled id='checkFrezerovka' type="checkbox"> Фасады с фрезеровкой
+                                  </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                      <input id='checkDoublePaint' type="checkbox"> Покраска с двух сторон
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <h3 style="margin-top:50px;">Деталировка</h3>
+                    <p>Удобнее всего переключать строки клавишей "Tab"</p>
+                    <br />
+                    <form id='details' class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <div class="col-sm-2 text-center">размер <b>A</b> (мм)</div>
+                            <div class="col-sm-2 text-center">размер <b>B</b> (мм)</div>
+                            <div class="col-sm-2 text-center">количество</div>
+                            <div class="col-sm-2 text-center">витрина <a data-toggle="tooltip" data-placement="top" title="Стандартный вырез под стекло с шириной рамки 60мм">(?)</a></div>
+                            <div class="col-sm-2 text-center">площадь</div>
+                            <div class="col-sm-2 text-center">цена</div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-2"><input data-row='1' id='a-1' class="form-control details-input" type="number"><a id='petli-a-1' class="fs-petli-link" data-toggle="modal" data-target="#petli-modal">+ петли</a></div>
+                            <div class="col-sm-2"><input data-row='1' id='b-1' class="form-control details-input" type="number"><a id='petli-b-1' class="fs-petli-link" data-toggle="modal" data-target="#petli-modal">+ петли</a></div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input data-row='1' id='count-1' class="form-control details-input" type="number" placeholder='0'>
+                                    <span class="input-group-addon">шт.</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 text-center"><label><input class="details-input" type="checkbox" id='vitrina-1'> да</label></div>
+                            <div class="col-sm-2 text-center"><text class='row-total' id='total-1'></text></div>
+                            <div class="col-sm-2 text-center"><text class='price-total' id='total-price-1'></text></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-2"><input data-row='2' id='a-2' class="form-control details-input" type="number"><a class="fs-petli-link" id='petli-a-2' data-toggle="modal" data-target="#petli-modal">+ петли</a></div>
+                            <div class="col-sm-2"><input data-row='2' id='b-2' class="form-control details-input" type="number"><a class="fs-petli-link" id='petli-b-2' data-toggle="modal" data-target="#petli-modal">+ петли</a></div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input data-row='2' id='count-2' class="form-control details-input" type="number" placeholder='0'>
+                                    <span class="input-group-addon">шт.</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 text-center"><label><input class="details-input" type="checkbox" id='vitrina-2'> да</label></div>
+                            <div class="col-sm-2 text-center"><text class='row-total' id='total-2'></text></div>
+                            <div class="col-sm-2 text-center"><text class='price-total' id='total-price-2'></text></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-2"><input data-row='3' id='a-3' class="form-control details-input" type="number"><a class="fs-petli-link" id='petli-a-3' data-toggle="modal" data-target="#petli-modal">+ петли</a></div>
+                            <div class="col-sm-2"><input data-row='3' id='b-3' class="form-control details-input" type="number"><a class="fs-petli-link" id='petli-b-3' data-toggle="modal" data-target="#petli-modal">+ петли</a></div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input data-row='3' id='count-3' class="form-control details-input" type="number" placeholder='0'>
+                                    <span class="input-group-addon">шт.</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 text-center"><label><input class="details-input" type="checkbox" id='vitrina-3'> да</label></div>
+                            <div class="col-sm-2 text-center"><text class='row-total' id='total-3'></text></div>
+                            <div class="col-sm-2 text-center"><text class='price-total' id='total-price-3'></text></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-2"><input data-row='4' id='a-4' class="form-control details-input" type="number"><a class="fs-petli-link" id='petli-a-4' data-toggle="modal" data-target="#petli-modal">+ петли</a></div>
+                            <div class="col-sm-2"><input data-row='4' id='b-4' class="form-control details-input" type="number"><a class="fs-petli-link" id='petli-b-4' data-toggle="modal" data-target="#petli-modal">+ петли</a></div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input data-row='4' id='count-4' class="form-control details-input" type="number" placeholder='0'>
+                                    <span class="input-group-addon">шт.</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 text-center"><label><input class="details-input" type="checkbox" id='vitrina-4'> да</label></div>
+                            <div class="col-sm-2 text-center"><text class='row-total' id='total-4'></text></div>
+                            <div class="col-sm-2 text-center"><text class='price-total' id='total-price-4'></text></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-2"><input data-row='5' id='a-5' class="form-control details-input" type="number"><a class="fs-petli-link" id='petli-a-5' data-toggle="modal" data-target="#petli-modal">+ петли</a></div>
+                            <div class="col-sm-2"><input data-row='5' id='b-5' class="form-control details-input" type="number"><a class="fs-petli-link" id='petli-b-5' data-toggle="modal" data-target="#petli-modal">+ петли</a></div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input data-row='5' id='count-5' class="form-control details-input" type="number" placeholder='0'>
+                                    <span class="input-group-addon">шт.</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 text-center"><label><input class="details-input" type="checkbox" id='vitrina-5'> да</label></div>
+                            <div class="col-sm-2 text-center"><text class='row-total' id='total-5'></text></div>
+                            <div class="col-sm-2 text-center"><text class='price-total' id='total-price-5'></text></div>
+                        </div>
+                    </form>
+                    <script>
+                        window.totalRows = 5;
+                    </script>
+                    <a id='btnDetailsAdd' class='btn btn-default'>+ добавить строки</a>
+                    <br><br>
+                    <p>Площадь всех прямых деталей &mdash; <b><text id='totalSquare'>0.00</text></b> м²</p>
+                    <p>Цена всех прямых деталей &mdash; <b><text id='totalSquarePrice'>0.00</text></b> руб.</p>
+                    <br><br>
+
+                    <div class="form-group">
+                        <div class="col-sm-3 text-center"></div>
+                        <div class="col-sm-3 text-center">высота (мм)</div>
+                        <div class="col-sm-2 text-center">количество</div>
+                        <div class="col-sm-2 text-center">тип</div>
+                        <div class="col-sm-2 text-center">цена</div>
+                    </div>
+                    <br>
+
+                    <div class="form-group" id='radiusDetails' style="background-color:#f4f4f4; padding-top:20px; height: 270px;">
+
+                        <div class='row'>
+                            <div class="col-sm-3">
+                                <text style='display: block; margin: 7px 10px'>Радиусный фасад 1</text>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <input data-radius-row='1' id="r-1" name="prepndedtext" class="form-control radius-input" type="number">
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input data-radius-row='1' id="r-count-1" name="appendedtext" class="form-control radius-input" placeholder='0' type="number">
+                                    <span class="input-group-addon">шт.</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2" style="margin: -15px 0 15px 0">
+                                <div class="col-md-4">
+                                    <div class="radio">
+                                        <label for="radios-1-vnesh">
+                                <input type="radio" name="radios-1" id="radios-1-vnesh" checked>
+                                Внешний
+                              </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="radios-1-vnut">
+                                <input type="radio" name="radios-1" id="radios-1-vnut">
+                                Внутренний
+                              </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <text class='row-radius-total' id='radius-1'></text>
+                            </div>
+                        </div>
+
+                        <div class='row'>
+                            <div class="col-sm-3">
+                                <text style='display: block; margin: 7px 10px'>Радиусный фасад 2</text>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <input data-radius-row='2' id="r-2" name="prepndedtext" class="form-control radius-input" type="number">
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input data-radius-row='2' id="r-count-2" name="appendedtext" class="form-control radius-input" placeholder='0' type="number">
+                                    <span class="input-group-addon">шт.</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2" style="margin: -15px 0 15px 0">
+                                <div class="col-md-4">
+                                    <div class="radio">
+                                        <label for="radios-2-vnesh">
+                                <input type="radio" name="radios-2" id="radios-2-vnesh" checked>
+                                Внешний
+                              </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="radios-2-vnut">
+                                <input type="radio" name="radios-2" id="radios-2-vnut" >
+                                Внутренний
+                              </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <text class='row-radius-total' id='radius-2'></text>
+                            </div>
+                        </div>
+
+                        <div class='row'>
+                            <div class="col-sm-3">
+                                <text style='display: block; margin: 7px 10px'>Радиусный фасад 3</text>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <input data-radius-row='3' id="r-3" name="prepndedtext" class="form-control radius-input" type="number">
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input data-radius-row='3' id="r-count-3" name="appendedtext" class="form-control radius-input" placeholder='0' type="number">
+                                    <span class="input-group-addon">шт.</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2" style="margin: -15px 0 15px 0">
+                                <div class="col-md-4">
+                                    <div class="radio">
+                                        <label for="radios-3-vnesh">
+                                <input type="radio" name="radios-3" id="radios-3-vnesh" checked>
+                                Внешний
+                              </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="radios-3-vnut">
+                                <input type="radio" name="radios-3" id="radios-3-vnut" >
+                                Внутренний
+                              </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <text class='row-radius-total' id='radius-3'></text>
+                            </div>
+                        </div>
+
+                        <div class='row'>
+                            <div class="col-sm-3">
+                                <text style='display: block; margin: 7px 10px'>Радиусный фасад 4</text>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="input-group">
+                                    <input data-radius-row='4' id="r-4" name="prepndedtext" class="form-control radius-input" type="number">
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="input-group">
+                                    <input data-radius-row='4' id="r-count-4" name="appendedtext" class="form-control radius-input" placeholder='0' type="number">
+                                    <span class="input-group-addon">шт.</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-2" style="margin: -15px 0 15px 0">
+                                <div class="col-md-4">
+                                    <div class="radio">
+                                        <label for="radios-4-vnesh">
+                                <input type="radio" name="radios-4" id="radios-4-vnesh" checked>
+                                Внешний
+                              </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label for="radios-4-vnut">
+                                <input type="radio" name="radios-4" id="radios-4-vnut" >
+                                Внутренний
+                              </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-2 text-center">
+                                <text class='row-radius-total' id='radius-4'></text>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- <a id='btnRadiusAdd' class='btn btn-default'>+ добавить еще радиусные фасады</a> -->
+
+                    <br />
+                    <br />
+
+                    <p>Цена радиусных деталей &mdash; <b><text id='totalPriceRadius'>0.00</text> руб.</b></p>
+                    <!-- <p>Радиусных деталей - <b>0</b> &nbsp;<a data-toggle="modal" data-target="#modal-radius" class="btn btn-defaul btn-xs">+ добавить радиусные детали</a></p> -->
+                    <br />
+                    <p>&nbsp;<a href='raschet.html' onclick='location.reload()'><i class="fa fa-times" aria-hidden="true"></i> очистить деталировку</a></p>
+                    <br />
+
+                    <h4>Комментарий к заказу:</h4>
+                    <textarea id='comment' class='form-control' rows='8' placeholder="Если требуется укажите здесь особые требования к заказу" ></textarea>
+                    <br>
+                </div>
+                <div id='payWidget' class="col-md-2 panel panel-default affix" style='margin-top:20px; right:0;'>
+                    <h4>
+                    Сумма заказа:
+                    <br />
+                    <b><text class='totalPrice'>0</text></b>&nbsp;руб.
+                    <br /><br />
+                    <a onclick="yaCounter44669668.reachGoal('btnPayWidget'); scrollPay()" class="btn btn-default">Перейти к оформлению</a>
+                  </h4>
+                </div>
+            </div>
+
+            <div class='row' id="fs-pay-section">
+                <div class='col-md-8 col-md-offset-2 text-ceneter panel panel-default' style='margin-top:20px;'>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <br />
+                            <h3>Полная стоимость заказа &mdash; <text class='totalPrice'>0</text> руб.
+                            <br>
+                            Предоплата 30% &mdash; <b><text class='predoplata'>0</text> руб.</b></h3>
+                            <h5>Остаток оплачиватся при получении фасадов</h5>
+                            <h5>Срок изготовления от 7 дней</h5>
+                            <!-- <h5>Забирать заказ по адресу &mdash; г.Ростов-на-Дону, ул.Тролейбусная 12, фабрика мебельных фасадов «Хамелеон»</h5> -->
+                        </div>
+                        <div class="col-md-3">
+                            <!-- <br />
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-delivery"><i class="fa fa-truck" style="font-size:300%;" aria-hidden="true" ></i><br /> Нажмите сюда,<br /> если требуется доставка</button> -->
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <!-- <label for="inputPhone" class="col-sm-2 control-label">Телефон
+                                    </label> -->
+                                    <div class="col-sm-3">
+                                        <input type="tel" class="form-control" id="inputPhone" placeholder="+7 (000) 000-00-00">
+                                        <span class="help-block">Телефон</span>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input type="email" class="form-control" id="inputEmail" placeholder="ivanov@mail.ru">
+                                        <span class="help-block">E-mail</span>
+                                    </div>
+                                    <div class="col-sm-4" style="margin-left:-20px;">
+                                        <a href='#' id='btnPay' onclick="payMandarin();return false;" class="btn btn-primary"></i> Оформить заказ</a>
+                                    </div>
+                                </div>
+                                <!-- <div class="form-group">
+                                    <label for="inputName" class="col-sm-2 control-label">Имя <span style="color:red;">*</span></label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="inputName" placeholder="Иван Иванович Иванов">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail" class="col-sm-2 control-label">E-mail <span style="color:red;">*</span></label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" id="inputEmail" placeholder="ivanov@mail.ru">
+                                    </div>
+                                </div> -->
+                                <!-- <div class="checkbox">
+                                    <label class="col-sm-7 col-sm-offset-2">
+                      <input disabled checked type="checkbox">Согласен с <a href='#'>правилами</a> системы и условиями заказа
+                    </label>
+                                </div> -->
+                                <!-- <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <a href='#' id='btnPay' onclick="payMandarin();return false;" class="btn btn-lg btn-primary"></i> Оформить заказ</a> &nbsp;&nbsp;
+                                        <img width='80px' style='padding:5px' src="https://admin.mandarinpay.com/sites/all/themes/mandarin/img/visa_icon.png" alt="">
+                                        <img width='80px' style='padding:5px' src="https://admin.mandarinpay.com/sites/all/themes/mandarin/img/mastercard_icon.png" alt="">
+                                        <img width='80px' style='padding:5px' src="img/norton.png" alt="">
+
+                                        <a class="222btn 222btn-default"><i class="fa fa-car" aria-hidden="true"></i> Оплатить курьеру наличными (+1000 руб.)</a>
+                                    </div>
+                                </div> -->
+                            </form>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <p>Помогаем с заказом, консультируем, обсуждаем сотрудничество <a href="tel:+78632417530">+7(906)422-88-89</a></p>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class='container'>
+            <div class='row'>
+                <div class="col-md-4 fs-bottom-menu">
+                    <ul class="nav nav-pills nav-stacked">
+                        <br /><br />
+                        <!-- <li><a href="#">Зарегистрироваться как поставщик</a></li> -->
+                        <li>Контактный телефон менеджера:<br /> +7(906)422-88-89<br />zakaz@fasadio.ru</li>
+                        <br /><br /><br /><br />
+                    </ul>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4 text-right">
+                    <br /><br />
+                    <!-- <a class="btn btn-default" href="registration.html"><i class="fa fa-handshake-o" aria-hidden="true"></i> Подключиться к системе<br /> как производитель фасадов</a> -->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>
+                        <small>© Fasadio.ru &mdash; онлайн система заказа мебельных фасадов</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- модалка петли -->
+<div class="modal fade" id="petli-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Добавить отверстия под петли</h4>
+      </div>
+      <div class="modal-body">
+
+        <form class="form-horizontal">
+          <fieldset>
+
+          <!-- Multiple Radios -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="">Кол-во отверстий в этой стороне фасада</label>
+            <div class="col-md-4">
+            <div class="radio">
+              <label for="otverstia-2">
+                <input type="radio" name="otverstia" id="otverstia-2" checked>
+                2 отверстия
+              </label>
+          	</div>
+            <div class="radio">
+              <label for="otverstia-3">
+                <input type="radio" name="otverstia" id="otverstia-3">
+                3 отверстия
+              </label>
+          	</div>
+            <div class="radio">
+              <label for="otverstia-4">
+                <input type="radio" name="otverstia" id="otverstia-4">
+                4 отверстия
+              </label>
+          	</div>
+            <div class="radio">
+              <label for="otverstia-5">
+                <input type="radio" name="otverstia" id="otverstia-5">
+                5 отверстий
+              </label>
+          	</div>
+            <div class="radio">
+              <label for="otverstia-6">
+                <input type="radio" name="otverstia" id="otverstia-6">
+                6 отверстий
+              </label>
+          	</div>
+            </div>
+          </div>
+
+          <!-- Appended Input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="rasstCentraDoKraya">Расстояние центра отверстия от края</label>
+            <div class="col-md-3">
+              <div class="input-group">
+                <input id="rasstCentraDoKraya" name="appendedtext" class="form-control" value="100" placeholder="100" type="number">
+                <span class="input-group-addon">мм</span>
+              </div>
+            </div>
+          </div>
+          <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title text-center">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                          Открыть дополнительные параметры
+                        </a>
+                      </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="rasstCentraDoKromki">Расстояние центра отверстия до кромки</label>
+                    <div class="col-md-3">
+                      <div class="input-group">
+                        <input id="rasstCentraDoKromki" name="appendedtext" class="form-control" value="22" placeholder="" type="number">
+                        <span class="input-group-addon">мм</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="diametrSverla">Диаметр сверла</label>
+                    <div class="col-md-3">
+                      <div class="input-group">
+                        <input id="diametrSverla" name="appendedtext" class="form-control" value="35" placeholder="" type="number">
+                        <span class="input-group-addon">мм</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-md-4 control-label" for="glubinaOtverstia">Глубина отверстия</label>
+                    <div class="col-md-3">
+                      <div class="input-group">
+                        <input id="glubinaOtverstia" name="appendedtext" class="form-control" value="12" placeholder="" type="number">
+                        <span class="input-group-addon">мм</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    Если у вас есть особые пожелания к сверлению отверстий под петли, укажите это в комментарии к заказу или сообщите менеджеру по телефону.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </fieldset>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+        <button type="button" onclick='petliSave()' data-dismiss="modal" class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- модальное окно доставки -->
+    <!-- <div class="modal fade" id="modal-delivery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form class="form-horizontal text-center" role="form">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Адрес доставки</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="inputEmail3" placeholder="введите адрес">
+                            </div>
+                        </div>
+                        <h4>Стоимость доставки по городу &mdash; 600 руб.</h4>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary">Согласны с ценой доставки, добавить в цену</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <script src="js/14functions.js"></script>
+    <script src="js/raschet.js"></script>
+    <script defered src="js/ral.js"></script>
+    <script defered src="js/wcp.js"></script>
+
+    <!-- BEGIN JIVOSITE CODE {literal} -->
+
+    <script type='text/javascript'>
+        (function() {
+            var widget_id = 'jo19cE5OZ6';
+            var d = document;
+            var w = window;
+
+            function l() {
+                var s = document.createElement('script');
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = '//code.jivosite.com/script/widget/' + widget_id;
+                var ss = document.getElementsByTagName('script')[0];
+                ss.parentNode.insertBefore(s, ss);
+            }
+            if (d.readyState == 'complete') {
+                l();
+            } else {
+                if (w.attachEvent) {
+                    w.attachEvent('onload', l);
+                } else {
+                    w.addEventListener('load', l, false);
+                }
+            }
+        })();
+    </script>
+
+    <!-- {/literal} END JIVOSITE CODE -->
+
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+/*Шрифт*/
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight:
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+/*Убираем стрелочки во всех инпутах с цифрами*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+/*Тонкий шрифт*/
+.fs-font-300 {
+  font-weight:300;
+}
+p {
+  font-size: 16px;
+  font-weight:300;
+}
+/*Хедер*/
+
+.navbar-inverse {
+    background-color: #333;
+    color: white!important;
+    border-radius: 0;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    color: #f4f4f4;
+}
+
+.navbar-nav li:hover {
+    background-color: black;
+}
+
+
+/*Первый экран*/
+
+.fs-first-block {
+    margin-top: 250px;
+    margin-bottom: 250px;
+}
+
+@media screen and (max-width: 768px) {
+    .fs-first-block {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+/*row на главной странице*/
+.fs-main-page-row {
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+/*Футер*/
+
+.footer {
+    background-color: #999999;
+    min-height: 200px;
+    margin-top: 50px;
+}
+
+.footer {
+    background-color: #a79ca1;
+    /* IE9, iOS 3.2+ */
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiNmZWE3OTYiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzRmOTBhYyIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, rgb(254, 167, 150)), color-stop(1, rgb(79, 144, 172)));
+    /* Android 2.3 */
+    background-image: -webkit-repeating-linear-gradient(top left, rgb(254, 167, 150) 0%, rgb(79, 144, 172) 100%);
+    /* IE10+ */
+    background-image: repeating-linear-gradient(to bottom right, rgb(254, 167, 150) 0%, rgb(79, 144, 172) 100%);
+    background-image: -ms-repeating-linear-gradient(top left, rgb(254, 167, 150) 0%, rgb(79, 144, 172) 100%);
+}
+
+
+/* IE8- CSS hack */
+
+@media \0screen\, screen\9 {
+    .gradient {
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fffea796", endColorstr="#ff4f90ac", GradientType=0);
+    }
+}
+
+.fs-main-img {
+    position: absolute;
+    z-index: 1;
+    right: 150px;
+    top: 170px;
+}
+
+
+/*Нижнее меню*/
+
+.fs-bottom-menu a {
+    color: #333!important;
+}
+
+
+/*Куб*/
+
+.fs-container-animate-cube {
+    position: absolute;
+    top: 150px;
+    right: 130px;
+    perspective: 500px;
+    perspective-origin: center -5em;
+}
+
+.side-cube, .container-cube {
+    width: 10em;
+    height: 20em;
+}
+
+.container-cube {
+    margin: 3em auto 0;
+    /*border: 2px dotted white;*/
+    transform-style: preserve-3d;
+    animation: rotate 10s infinite linear;
+}
+
+.side-cube {
+    position: absolute;
+    width: 10em;
+    height: 15em;
+}
+
+.side-ends-cube {
+    position: absolute;
+    width: 10em;
+    height: 10em;
+    filter: brightness(70%);
+}
+
+#front-cube {
+    transform: translateZ(0.25em);
+}
+
+.left-cube {
+    transform: translateX(-0.25em) rotateY(90deg);
+    width: 0.5em;
+    height: 15em;
+}
+
+.right-cube {
+    transform: translateX(9.75em) rotateY(90deg);
+    width: 0.5em;
+    height: 15em;
+}
+
+.top-cube {
+    transform: translateY(-0.25em) rotateX(90deg);
+    height: 0.5em;
+}
+
+.bottom-cube {
+    transform: translateY(9em) rotateX(90deg);
+    height: 1em;
+}
+
+.back-cube {
+    transform: translateZ(-0.25em);
+    background: #f5f5f5;
+}
+
+.main-sides-cube {
+    background: #f5f5f5;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/*.fs-blick-on {
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    background-color: rgba(255, 207, 203, 0.5);
+}*/
+/*петли*/
+.fs-petli-link {
+  font-size: 0.9em;
+  /*display: none;*/
+}
+.fs-petli-link:hover {
+  cursor:pointer;
+}
